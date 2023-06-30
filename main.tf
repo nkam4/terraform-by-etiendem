@@ -1,7 +1,5 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = 
-  secret_key = 
 }
 
 resource "aws_vpc" "main" {
@@ -112,7 +110,7 @@ resource "aws_instance" "ubuntu" {
   ami           =  "ami-04cd519d2f9578053" 
   instance_type = "t2.micro"
   availability_zone = "us-east-1a"
-  key_name = "ansible" 
+  key_name = "jenkinskeypair" 
 
   tags = {
     Name = "HelloWorld"
